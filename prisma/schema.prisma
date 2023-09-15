@@ -9,3 +9,18 @@ datasource db {
   provider = "sqlite"
   url      = env("DATABASE_URL")
 }
+
+model Video {
+  id            String   @id @default(uuid())
+  mane          String
+  path          String
+  transcription String?
+  createdAt     DateTime @default(now())
+}
+
+model Prompt {
+  id        String   @id @default(uuid())
+  title     String
+  template  String
+  createdAt DateTime @default(now())
+}
