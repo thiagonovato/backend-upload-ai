@@ -1,3 +1,7 @@
 ### Run migrate
 
 `npx prisma migrate dev`
+
+### Open Prisma Studio
+
+`npx prisma studio`

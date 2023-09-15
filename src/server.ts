@@ -1,11 +1,10 @@
 import { fastify } from 'fastify'
+import { getAllPromptRoutes } from './routes/get-all-prompts'
 
 const app = fastify()
 const port = 3333
 
-app.get('/', async (request, reply) => {
-  return { hello: 'world' }
-})
+app.register(getAllPromptRoutes)
 
 app.listen({
   port
